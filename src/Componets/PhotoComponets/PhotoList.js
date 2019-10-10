@@ -9,6 +9,7 @@ import PhotoCont from './PhotoCont';
 const [photo, setPhoto] = useState({});
 const [date, setDate] = useState([]);
 const [title, setTitle] = useState([]);
+const [explanation,setExplanation] = useState([]);
   useEffect(() => {
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=ZWLD7HPmhALpwuBx8dQfhBxCgarQGE8uMtthChW5`)
@@ -18,6 +19,7 @@ const [title, setTitle] = useState([]);
         console.log(photo)
         setDate(response.data.date)
         setTitle(response.data.title)
+        setExplanation(response.data.explanation)
       })
       .catch(error => {
         console.log("The data was not returned", error);
@@ -28,7 +30,7 @@ const [title, setTitle] = useState([]);
      
 
 <>
- <PhotoCont photo = {photo} date ={date} title ={title}/>
+ <PhotoCont photo = {photo} date ={date} title ={title} explanation = {explanation} />
 
 
 
