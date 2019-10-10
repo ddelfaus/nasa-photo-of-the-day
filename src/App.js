@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import PhotoList from './Componets/PhotoComponets/PhotoList'
+import PhotoList from './Componets/PhotoComponets/PhotoList';
 import axios from "axios";
 import { useEffect, useState } from "react";
 
