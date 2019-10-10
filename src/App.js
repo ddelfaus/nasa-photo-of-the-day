@@ -16,7 +16,7 @@ function App() {
 // })
   return (
     <div className="App">
-   
+   <h1 className = "Title">NASA's Picture of the Day!</h1>
     <PhotoList />
     </div>
   );
